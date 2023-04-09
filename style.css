@@ -1,0 +1,107 @@
+body {
+    background-color: #f5dca3;
+}
+.menu ul{
+    display: flex;
+    justify-content:right;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu ul li a{
+    color:#8C9761;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Georgia;
+    font-weight: bold;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    border-right: 7px ridge rgb(105, 131, 131);
+    border-bottom: 7px ridge rgb(86, 146, 146);
+}
+
+.logo {
+    background-color: #adb97e;
+    justify-content: flex-start;
+       
+}
+
+
+
+.iconos {
+    display: flex;
+    font-size: 40px;
+    gap: 20px;
+    justify-content:flex-end;
+}
+
+h1 {
+    color:#8C9761;
+    font-size: 45px;
+    font-family: Georgia ;
+    font-weight: lighter;
+    text-align: center
+}
+
+p {
+    color: rgb(63, 104, 104);
+    font-size: 25px;
+    font-family: serif ;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 50px;
+    padding: 25px;
+
+}
+
+.texto{
+    width: 750px;
+}
+
+.datos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+.iconos-datos{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-items: center;
+}
+
+i {
+  font-size: 35px;  
+}
+
+.whatsap{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: right;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    /*border-top: 1px;*/
+    border-top: 2px solid rgb(63, 104, 104);
+    border-bottom: 2px solid rgb(63, 104, 104);
+    
+}

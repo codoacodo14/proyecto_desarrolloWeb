@@ -2,16 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Codo a Codo - Grupo 14" content="Alejandro, Laura, Marisol, Viviana" />
-<meta
-  name="description"
-  content="TPO Desarrollo Web
+    <meta
+      name="Codo a Codo - Grupo 14"
+      content="Alejandro, Laura, Marisol, Viviana"
+    />
+    <meta
+      name="description"
+      content="TPO Desarrollo Web
 HTML, CSS y Javascript."
-/>
+    />
 
     <title>Espacio Cultural "MOSAICO"</title>
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="shortcut icon"
       href="./static/img/logo.png"
@@ -25,23 +29,27 @@ HTML, CSS y Javascript."
 
   <body>
     <div class="header">
-      <img src="./static/img/logo.png" width="200" height="200" alt="">
-      <div>
+      <div class="logo">
+        <img src="./static/img/logo.png" height="175" alt="" />
+      </div>
+
+      <div class="iconos">
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-instagram"></i>
       </div>
-
-      <nav class="menu">
-        <ul>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Eventos/Talleres</a></li>
-          <li><a href="#">Biblioteca Virtual</a></li>
-          <li><a href="#">Contactanos</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div>
       <div>
+        <nav class="menu">
+          <ul>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Eventos/Talleres</a></li>
+            <li><a href="#">Biblioteca Virtual</a></li>
+            <li><a href="#">Contactanos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="main">
+      <div class="texto">
         <h1>BIENVENIDOS</h1>
 
         <p>
@@ -54,25 +62,23 @@ HTML, CSS y Javascript."
           proclama.
         </p>
       </div>
-      <div>
-        <img src="static\img\fachada.jpg" width="450" height="300" alt="" >
+
+      <img src="static\img\fachada.jpg" width="450" height="300" alt="" />
+    </div>
+    <div class="datos">
+      <div class="iconos-datos">
+        <i class="fa-sharp fa-regular fa-clock"></i>
+        <p>Lunes a Viernes<br />de 10 a 18 hs</p>
       </div>
-      <div>
-        <div>
-          <i class="fa-sharp fa-regular fa-clock"></i>
-          <p>Lunes a Viernes<br />de 10 a 18 hs</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-location-dot"></i>
-          <p>Bv.Felicidad N°362<br />aquí el mapa de la ubicación</p>
-        </div>
-        <div>
-          <i class="fa-brands fa-whatsapp"></i>
-          <p>Para coordinar visitas</p>
-        </div>
+      <div class="iconos-datos">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Bv.Felicidad N°362<br />aquí el mapa de la ubicación</p>
+      </div>
+      <div class="iconos-datos">
+        <i class="fa-brands fa-whatsapp"></i>
+        <p>Para coordinar visitas</p>
       </div>
     </div>
-
     <footer>
       <p>
         Hecho por
