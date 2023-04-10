@@ -23,16 +23,60 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 25px;
-    border-right: 7px ridge rgb(105, 131, 131);
-    border-bottom: 7px ridge rgb(86, 146, 146);
+    /*border-right: 7px ridge rgb(105, 131, 131);
+    border-bottom: 7px ridge rgb(86, 146, 146);*/
 }
 
 .logo {
+    width: 175px;
     background-color: #adb97e;
     justify-content: flex-start;
+    border: 1px solid black;
+    position: relative;
+    z-index: 4;
        
 }
 
+.clase1 {
+    position: absolute;
+    z-index: relative;
+    left: 20px;
+    top: 20px;
+    width: 150px;
+    height: 160px;
+    border: 1px solid black;
+    background-color: rgb(255,123,84);
+    padding: 10px;
+    opacity: 0.85;
+    overflow: hidden;
+}
+
+.clase2 {
+    position: absolute;
+    z-index: auto;
+    left: 60px;
+    top: 50px;
+    width: 150px;
+    height: 160px;
+    border: 1px solid black;
+    background-color:rgb(28,49,94);
+    padding: 10px;
+    opacity: 0.95;
+    overflow: hidden;
+
+}
+/*.clase3 {
+    position: relative;
+    z-index: 3;
+    left: 210px;
+    top: 10px;
+    width: 220px;
+    height: 90px;
+    border: 1px solid black;
+    background-color: rgb(18,93,152);
+    padding: 10px;
+    opacity: 0.95;
+    overflow: hidden;*/
 
 
 .iconos {
