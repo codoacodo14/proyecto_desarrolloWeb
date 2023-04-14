@@ -25,36 +25,46 @@ HTML, CSS y Javascript."
       src="https://kit.fontawesome.com/b37802bc78.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <div class="header">
-      <div class="logo">
-        <img src="./static/img/logo.png" height="175" alt="" />
-      </div>
-      <div class="clase1"></div>
-      <div class="clase2"></div>
-      <div class="iconos">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-      </div>
-      <div>
+    <div class="container">
+    <header class="container-header">
+    
+        <img class="logo" src="./static/img/logo.png" alt="" />
+      
+     
+      
+        
+      
         <nav class="menu">
           <ul>
+            <li><i class="fa-brands fa-facebook"></i></li>
+             <li> <i class="fa-brands fa-instagram"></i></li>
             <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Eventos/Talleres</a></li>
-            <li><a href="#">Biblioteca Virtual</a></li>
-            <li><a href="#">Contactanos</a></li>
+            <li><a href="./events/events.html">Eventos/Talleres</a></li>
+            <li><a href="./library/library.html">Biblioteca Virtual</a></li>
+            <li><a href="./contact/contact.html">Contactanos</a></li>
           </ul>
+          <button class="toggle-menu">
+            <i class="fa fa-bars"></i>
+          </button>
+          <button class="close-menu">
+            <i class="fa fa-times"></i>
+          </button>
         </nav>
-      </div>
-    </div>
-    <div class="main">
-      <div class="texto">
+      
+  
+</header>
+    <main class="container-main">
+      <section class="text">
         <h1>BIENVENIDOS</h1>
 
         <p>
-          Somos amalgama de formas y colores. cultura que se fusiona y se
+          Somos amalgama de formas y colores, cultura que se fusiona y se
           entrelaza, mestizaje de voces, de saberes y sabores, sincretismo que
           enriquece.<br />
           En Mosaico, se dibuja la diversidad, las raices se unen y las
@@ -62,33 +72,40 @@ HTML, CSS y Javascript."
           la identidad, y en nuestras paredes, la creatividad se alza y se
           proclama.
         </p>
-      </div>
-      <aside style="background-color: rgb(37, 109, 133); padding: 20px">
-        <img src="static\img\fachada.jpg" width="450" height="300" alt="" />
-        <div class="clase3"></div>
-      </aside>
-      />
-    </div>
-    <div class="datos">
-      <div class="iconos-datos">
+    </section>
+  </main>
+       
+         <aside class="image"></aside>
+
+        
+      
+      
+    
+    <footer class="container-footer">
+      <section class="icons-dates">
+        <div class="info">
         <i class="fa-sharp fa-regular fa-clock"></i>
         <p>Lunes a Viernes<br />de 10 a 18 hs</p>
       </div>
-      <div class="iconos-datos">
+      <div class="info">
         <i class="fa-solid fa-location-dot"></i>
         <p>Bv.Felicidad N°362<br />aquí el mapa de la ubicación</p>
       </div>
-      <div class="iconos-datos">
+      <div class="info">
         <i class="fa-brands fa-whatsapp"></i>
         <p>Para coordinar visitas</p>
       </div>
-    </div>
-    <footer>
+      </section>
+      <section class="end">
+   
       <p>
         Hecho por
         <i class="fa-regular fa-lightbulb"></i>
         CodoaCodo Grupo 14
       </p>
+    </section>
     </footer>
+  </div>
   </body>
+  <script src="./app.js"></script>
 </html>
