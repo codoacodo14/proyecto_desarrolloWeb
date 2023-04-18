@@ -1,0 +1,8 @@
+.contact-h1{
+    font-size: 30px;
+    padding-right: 3rem;
+}
+.contain-logo{
+    display: flex;
+    justify-content: space-between;
+}
