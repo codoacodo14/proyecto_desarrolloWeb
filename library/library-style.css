@@ -1,0 +1,36 @@
+
+body{
+    background-color: #f5dca3;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+.container {
+    display: grid;
+    
+
+    /* Uso un atajo para definir tres filas / tres columnas */
+    grid-template: auto 40% 40% / 15% 60% 15%;
+
+    /* Distribuimos el contenido en cada fila */
+    grid-template-areas: "logo header header"
+                         "left  contenido right"
+                         "foot foot foot";
+    /* separamos los items con gap */
+    gap: 1% 1%;
+
+}
+
+.Logo    { grid-area: logo;  background-color:  #dfbfb1; }
+.Header    { grid-area: header;    background-color:  #f5dcd1; text-shadow: 8px 6px 11px #A9907E }
+.Left       { grid-area: left;       background-color: coral;  }
+.Right      { grid-area: right;       background-color: rgb(177, 177, 66);  }
+.Main       { grid-area: contenido; background-color: rgb(60, 215, 226);}
+.Footer      { grid-area: foot;       background-color: orange;  }
+
+.item {
+    padding: 30px;
+    text-align: center;
+    height: 50%;
+    color: rgb(251, 253, 251);
+    border-radius: 10px;
+}
