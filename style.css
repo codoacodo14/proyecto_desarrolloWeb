@@ -9,6 +9,7 @@ body {
     background-color: #f5dca3;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    width: 100%;
 }
 h1 {
     color:#8C9761;
@@ -64,6 +65,7 @@ p {
 .toggle-menu  {
     position: absolute;
     top: 0;
+    
     right: 0;
     width: 40px;
     height: 40px;
@@ -185,12 +187,18 @@ p {
     padding: 1rem;
 }
 .icons-dates{
-   
-    
+   font-size: 20px;
+   font-weight:bold;
+    color: #FFB26B;
     display: flex;
     align-items: baseline;
     gap: 25px;
    justify-content: space-between;
+}
+.icons-dates i:hover{
+ 
+  transform: scale(1) rotate(160deg);
+    transition: all 0.5s ease-in-out;
 }
 .info{
     display: flex;
@@ -200,6 +208,28 @@ p {
 } 
 .info p{
     font-size: 14px;
+}
+.map{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  align-items: center;
+  justify-content: center;
+  
+}
+.info-map{
+  display: flex;
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+.info-map p{
+  font-size: 14px;
+}
+#map{
+width: 300px;
+height: 100px;
 }
 .end p{
    text-align: center; 
@@ -251,7 +281,7 @@ p {
         background-color: #fff;
         z-index: 9999;
         overflow-y: auto;
-        transform: translateX(100%);
+        transform: translateX(170%);
         transition: transform 0.3s ease;
       }
     
@@ -263,10 +293,15 @@ p {
       .menu ul li {
         margin: 10px 0;
       }
-    
+      
       .toggle-menu {
+        top: 0;
+        right: 0;
         display: block;
+        justify-self: end;
+       position: absolute;
       }
+      
         .close-menu.show,
   .menu ul.show + .close-menu {
     display: block !important;
