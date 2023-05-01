@@ -59,14 +59,14 @@ inputs.forEach((input)=>{
 })
 
 form.addEventListener('submit', (e)=>{
-    e.preventDefault();
+   
     if(fields.name && fields.mail && fields.phone){
         form.reset();
 
         document.getElementById('form_mess_exit').classList.add('form_mess_exit_active');
         setTimeout(()=>{
             document.getElementById('form_mess_exit').classList.remove('form_mess_exit_active'); 
-        }, 5000 );
+        }, 7000 );
 
         document.querySelectorAll('.form_correct').forEach((icon)=>{
             icon.classList.remove('form_correct');
