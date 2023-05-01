@@ -1,36 +1,40 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f5dca3;  
+    background-color: #f5dca3;
     font-family: 'Poppins', sans-serif;
 }
 
+h2, li {
+    color:#8C9761;
+}
 .container {
     display: grid;
     /* Uso un atajo para definir tres filas / tres columnas */
-    grid-template:  20% 60% 10% / 17% 60% 17%;
+    grid-template: 20% 65% 8% / 17% 60% 17%;
 
     /* Distribuimos el contenido en cada fila */
-    grid-template-areas: "logo header header"
-        "left  contenido contenido"
+    grid-template-areas:
+        "header header header"
+        "left contenido right"
         "foot foot foot";
-    /* separamos los items con gap */    
+    /* separamos los items con gap */
     grid-gap: 5px;
     column-gap: 20px;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .Logo {
     grid-area: logo;
-    background-color: #dfbfb1;   
+    background-color: #dfbfb1;
 }
 
 .Header {
     grid-area: header;
     background-color: #f5dcd1;
-    }
+}
 
 .Left {
     grid-area: left;
@@ -38,6 +42,7 @@ body {
     border-left: 15px;
     list-style: none;
     font-size: larger;
+    text-align: justify;
 
 }
 
@@ -47,11 +52,11 @@ body {
 }
 
 .Main {
-    grid-area: contenido;   
+    grid-area: contenido;
     background-color: rgb(189, 220, 223);
-    text-align:justify;
+    text-align: justify;
     font-size: large;
-  
+
 }
 
 .Footer {
@@ -65,4 +70,3 @@ body {
     border-radius: 15px;
     text-align: center;
 }
-
