@@ -28,6 +28,9 @@ HTML, CSS y Javascript."
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
   </head>
 
   <body>
@@ -87,10 +90,15 @@ HTML, CSS y Javascript."
         <i class="fa-sharp fa-regular fa-clock"></i>
         <p>Lunes a Viernes<br />de 10 a 18 hs</p>
       </div>
-      <div class="info">
+      <div class="map">
+        <div class="info-map">
         <i class="fa-solid fa-location-dot"></i>
-        <p>Bv.Felicidad N°362<br />aquí el mapa de la ubicación</p>
+        
+        <p>Bv.Felicidad N°362</p>
       </div>
+        <div id="map"></div>
+      </div>
+      
       <div class="info">
         <i class="fa-brands fa-whatsapp"></i>
         <p>Para coordinar visitas</p>
@@ -107,5 +115,9 @@ HTML, CSS y Javascript."
     </footer>
   </div>
   </body>
-  <script src="./app.js"></script>
+  
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+     <script src="./app.js"></script>
 </html>
