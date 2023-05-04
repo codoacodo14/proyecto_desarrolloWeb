@@ -5,8 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./contact-style.css" />
+    <script
+      src="https://kit.fontawesome.com/b37802bc78.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    CONTACTO
+  <div class="container">
+    <header class="container-header">
+        <div class="contain-logo">
+            <img class="logo" src="../static/img/logo.png" alt="" />
+            <h1 class="contact-h1">¿Querés enviarnos tus sugerencias y/o consultas?</h1>
+        </div>
+        
+        
+    </header>
+    <main class="main-contact">
+      <section class="contact">
+        <h3>Encontranos en Redes</h3>
+        <div class="contact-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+       
+      </section>
+        <section class="container-form">
+            <form  action="https://formsubmit.co/codoacodo.grupo14@gmail.com" method="POST" class="form" id="formId" >
+              <div class="form_group" id="group_name">
+                <label for="name" class="form__label">Nombre</label>
+                <div class="form_group_input">
+                  <input type="text" class="form_input" name="name" id="name" placeholder="John Doe">
+                  <i class="form_validation_state fas fa-times-circle"></i>
+                </div>
+                <p class="form_input_error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+              </div>
+              <div class="form_group" id="group_mail">
+                <label for="mail" class="form_label">Correo Electrónico</label>
+                <div class="form_group_input">
+                  <input type="email" class="form_input" name="mail" id="mail" placeholder="correo@correo.com" >
+                  <i class="form_validation_state fas fa-times-circle"></i>
+                </div>
+                <p class="form_input_error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+              </div>
+              <div class="form_group" id="group_phone">
+                <label for="phone" class="form_label">Teléfono</label>
+                <div class="form_group_input">
+                  <input type="text" class="form_input" name="phone" id="phone" placeholder="3454181695">
+                  <i class="form_validation_state fas fa-times-circle"></i>
+                </div>
+                <p class="form_input_error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+              </div>
+                <label for="mess">Tu mensaje</label>
+                <textarea  id="message" cols="30" rows="10" name="message"></textarea>
+                <button type="submit">Enviar</button>
+                <p id="form_mess_exit" class="form_mess_exit">Ya se envió tu consulta, en breve nos comunicamos con vos!</p>
+                <div class="form_mess" id="form_mess">
+                  <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                </div>
+                
+            </form>
+        </section>  
+      </main>
+        <footer class="container-footer">
+            <section class="icons-dates">
+              <div class="info">
+              <i class="fa-sharp fa-regular fa-clock"></i>
+              <p>Lunes a Viernes<br />de 10 a 18 hs</p>
+            </div>
+            <div class="map">
+              <div class="info-map">
+              <i class="fa-solid fa-location-dot"></i>
+              
+              <p>Bv.Felicidad N°362</p>
+            </div>
+              <div id="map"></div>
+            </div>
+            <div class="info">
+              <i class="fa-brands fa-whatsapp"></i>
+              <p>Para coordinar visitas</p>
+            </div>
+            </section>
+            <section class="end">
+         
+            <p>
+              Hecho por
+              <i class="fa-regular fa-lightbulb"></i>
+              CodoaCodo Grupo 14
+            </p>
+          </section>
+          </footer>
+    
+  </div>
 </body>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+<script src="./contact.js"></script>
 </html>
