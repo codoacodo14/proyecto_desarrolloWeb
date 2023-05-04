@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5dca3;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2, li {
+    color:#8C9761;
+}
+.container {
+    display: grid;
+    /* Uso un atajo para definir tres filas / tres columnas */
+    grid-template: 20% 65% 8% / 17% 60% 17%;
+
+    /* Distribuimos el contenido en cada fila */
+    grid-template-areas:
+        "header header header"
+        "left contenido right"
+        "foot foot foot";
+    /* separamos los items con gap */
+    grid-gap: 5px;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+
+.Logo {
+    grid-area: logo;
+    background-color: #dfbfb1;
+}
+
+.Header {
+    grid-area: header;
+    background-color: #f5dcd1;
+}
+
+.Left {
+    grid-area: left;
+    background-color: coral;
+    border-left: 15px;
+    list-style: none;
+    font-size: larger;
+    text-align: justify;
+
+}
+
+.Right {
+    grid-area: right;
+    background-color: rgb(177, 177, 66);
+}
+
+.Main {
+    grid-area: contenido;
+    background-color: rgb(189, 220, 223);
+    text-align: justify;
+    font-size: large;
+
+}
+
+.Footer {
+    grid-area: foot;
+    background-color: orange;
+}
+
+.item {
+    padding: 5px;
+    height: 100%;
+    border-radius: 15px;
+    text-align: center;
+}
