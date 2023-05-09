@@ -1,6 +1,5 @@
 /*GENERAL*/
 *{
-    
     padding: 0;
     box-sizing: border-box;
     
@@ -39,7 +38,7 @@ p {
 .container-header{
     grid-column-start: 1;
     grid-column-end: 4;
-   gap: 2rem;
+    gap: 2rem;
 }
 .menu {
     grid-column: 3;
@@ -140,8 +139,6 @@ p {
   }
 
 
- 
-
 
 /*MAIN*/
 
@@ -219,9 +216,9 @@ p {
 }
 .info-map{
   display: flex;
-    gap:1rem;
-    align-items: center;
-    justify-content: center;
+  gap:1rem;
+  align-items: center;
+  justify-content: center;
     
 }
 .info-map p{
@@ -302,7 +299,7 @@ height: 100px;
        position: absolute;
       }
       
-        .close-menu.show,
+  .close-menu.show,
   .menu ul.show + .close-menu {
     display: block !important;
     z-index: 1;
