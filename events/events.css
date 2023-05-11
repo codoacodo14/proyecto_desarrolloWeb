@@ -20,16 +20,22 @@
 .hero{
     padding-top: 2.5rem;
     padding-right: 3rem;
+    
 }
 
 .container-hr{
+    display: flex;
+    justify-content: space-between;
     background: url("../events/imagenes/mountain-6538890_1280.jpg"); 
     width: 100%;
     height: 40vh; 
+    
     background-repeat: no-repeat; 
     background-size: cover; 
 }
-
+.logo{
+    margin-top: 40px;
+}
 
 .grid-main{
     /* display: grid; */

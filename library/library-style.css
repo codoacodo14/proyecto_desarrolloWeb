@@ -25,35 +25,64 @@ h2, li {
     column-gap: 20px;
     justify-content: space-between;
 }
-
-.Logo {
-    grid-area: logo;
-    background-color: #dfbfb1;
+.contain-logo{
+    width: 100%;
+    margin-right: 0;
+    display: flex;
+    padding-right: 0;
+    
+ }
+ 
+.contact-h1{
+    color:#8C9761;
+    font-size: 45px;
+    margin-left: 18rem;
+    padding-top: 2rem;
+    text-shadow: 8px 6px 11px #A9907E;
+    opacity: 0; 
+    animation: fadeIn 4s ease-in-out forwards;
 }
 
-.Header {
-    grid-area: header;
-    background-color: #f5dcd1;
+ .logo {
+    margin-top: 2rem;
 }
+
+
 
 .Left {
     grid-area: left;
-    background-color: coral;
+    margin-top: 4rem;
     border-left: 15px;
     list-style: none;
     font-size: larger;
     text-align: justify;
-
+    background-color: #8C9761;
+    
+}
+.Left h2{
+    color: #FFB26B;
+}
+.Left li{
+    margin-bottom: 1rem;
+   color: #FFB26B;
+   padding: 0 10px 0 10px;
 }
 
 .Right {
     grid-area: right;
-    background-color: rgb(177, 177, 66);
+    background-color: #8C9761;
+    margin-top: 4rem;
+}
+.Right h2{
+color: #FFB26B;
+}
+.Right iframe{
+    margin-top: 1rem;
 }
 
 .Main {
     grid-area: contenido;
-    background-color: rgb(189, 220, 223);
+    
     text-align: justify;
     font-size: large;
 
@@ -61,12 +90,28 @@ h2, li {
 
 .Footer {
     grid-area: foot;
-    background-color: orange;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 .item {
     padding: 5px;
-    height: 100%;
+    height:fit-content;
     border-radius: 15px;
     text-align: center;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+      }
+      25%{
+        opacity: 0.25;
+      }
+      50% {
+        opacity: 0.5; 
+      }
+      100% {
+        opacity: 1;
+      }
+  }
