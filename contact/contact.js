@@ -39,15 +39,11 @@ const campValidate = (expression,input, camp) => {
     if(expression.test(input.value)){
         document.getElementById(`group_${camp}`).classList.remove('form_incorrect');
         document.getElementById(`group_${camp}`).classList.add('form_correct');
-        document.querySelector(`#group_${camp}`).classList.add('fa-check-circle');
-        document.querySelector(`#group_${camp}`).classList.remove('fa-times-circle');
         document.querySelector('#group_name .form_input_error').classList.remove('form_input_error_active');
         fields[camp] = true;
     }else{
         document.getElementById(`group_${camp}`).classList.add('form_incorrect');
         document.getElementById(`group_${camp}`).classList.remove('form_correct');
-        document.querySelector(`#group_${camp}`).classList.add('fa-times-circle');
-        document.querySelector(`#group_${camp}`).classList.remove('fa-check-circle');
         document.querySelector(`#group_${camp} .form_input_error`).classList.add('form_input_error_active');
         fields[camp] = false;
     }
@@ -78,3 +74,29 @@ form.addEventListener('submit', (e)=>{
         }, 5000 );
     }
 })
+
+//API MAPS
+
+let map = L.map('map').setView([19.21619, -99.194467],12)
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+let circle = L.circle([19.21619, -99.194467], {
+  color: 'red',
+  fillColor: '#f03',
+  fillOpacity: 0.5,
+  radius: 500
+}).addTo(map);
+
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("Bv. La Felicidad N°362 - " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);

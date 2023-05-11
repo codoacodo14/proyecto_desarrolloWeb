@@ -1,12 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    EVENTOS
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Codo a Codo - Grupo 14"
+      content="Alejandro, Laura, Marisol, Viviana"
+    />
+    <meta
+      name="description"
+      content="TPO Desarrollo Web
+HTML, CSS y Javascript."
+    />
+
+    <title>MOSAICO - Talleres y Eventos</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="shortcut icon"
+      href="./events/imagenes/logo.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/b37802bc78.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <link rel="stylesheet" href="./style.css">
+     <link rel="stylesheet" href="./events.css">
+    
+  </head>
+
+<body> 
+
+      <header class="container-hr">
+        <img class= "logo" src="../static/img/logo.png" alt="">
+        <div class="hero">
+          <h1>Mosaico</h1>
+          <h2>Talleres y Eventos</h2>
+        </div>
+      </header>
+      
+      <main class="grid-main">
+        <section class="works">
+         <div class="container-workspaces">
+            <div class="workspaces">
+              <h2 class="ws-ev">Hagamos</h2>
+              <h1 class="ws-ev">Arte</h1>
+                <div class="circle">
+                  <i class="fas fa-circle"></i>
+                </div>
+              <div class="text-left">
+                <p>Los talleres están diseñados para explorar y desarrollar habilidades en áreas como la música, artes plásticas, danzas, teatro, lectura y escritura, y más..., más..., más... <br>
+                Tendrás la oportunidad de aprender de maestros en cada campo, mejorar tus habilidades y experimentar con diversidad de técnicas y materiales</p>
+              </div>
+            </div>
+
+            <div id="slider" >
+              <figure>
+                <img class="medium" src="imagenes/musica.jpeg" alt="">
+                <img class="medium" src="imagenes/danza_tango.jpg" alt="">
+                <img class="medium" src="imagenes/pinceles.jpg" alt="">
+                <img class="medium" src="imagenes/teatro.webp" alt="">
+                <img class="medium" src="imagenes/coloresTalleres.webp" alt="">
+              </figure>
+            </div>      
+          </div>
+        </section>
+
+        <section class="event">
+          <div class="container-events">
+            <div class="info-ev">
+              <div class="image-group">
+                  <img  src="./imagenes/Betita.JPG" alt="" />
+                  
+                  <a href=https://youtu.be/XD_FcSfNyHk" target="_blank">
+                    <img  src="./imagenes/spinettango2.jfif" alt=""> Clickea 'Spinettango'
+                  </a>     
+                  <img  src="./imagenes/photographer-428388_640.jpg" alt="" height="">
+                  <img  src="./imagenes/artesano.avif" alt=""> 
+                  
+                </div>                
+              <div class="des rig">   
+              <div class="global"><h2 class="ws-ev">Nuestra</h2>
+                <h1 class="ws-ev">Cartelera</h1>
+              </div>     
+                
+              <div class="circle">
+                <i class="fas fa-circle"></i>
+              </div>
+             <div class="table-responsive">
+              <table>
+                <thead>
+                <tr>
+                  <th>Día</th>
+                  <th>Hora</th>
+                  <th>Lugar</th>
+                  <th>Evento</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Viernes 19 de mayo</td>
+                  <td>20:30</td>
+                  <td>Sala de Teatro</td>
+                  <td>"Evocando a Betita"</td>
+                </tr>
+                <tr>
+                  <td>Sábado 20 de mayo</td>
+                  <td>21</td>
+                  <td>Auditorio</td>
+                  <td>"Spinettango"</td>
+                </tr>
+                <tr>
+                  <td>Domingo 21 de mayo</td>
+                  <td>16</td>
+                  <td>Patio de Los Encuentros</td>
+                  <td>"Feria de Artesanos"</td>
+                </tr><tr>
+                  <td>Domingo 21 de mayo</td>
+                  <td>16</td>
+                  <td>Sala de Exposiciones</td>
+                  <td>"Muestra Fotográfica Quique Torrente"</td>
+                </tr>
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+      
+      </div>
+    </section>  
+    </main>
+
+    <footer class="container-footer">
+      <section class="icons-dates">
+        <div class="info">
+        <i class="fa-sharp fa-regular fa-clock"></i>
+        <p>Lunes a Viernes<br />de 10 a 18 hs</p>
+      </div>
+      <div class="map">
+        <div class="info-map">
+        <i class="fa-solid fa-location-dot"></i>
+        
+        <p>Bv.Felicidad N°362</p>
+      </div>
+        <div id="map"></div>
+      </div>
+      
+      <div class="info">
+        <i class="fa-brands fa-whatsapp"></i>
+        <p>Para coordinar visitas</p>
+      </div>
+      </section>
+      <section class="end">
+   
+        <p>
+          Hecho por
+          <i class="fa-regular fa-lightbulb"></i>
+          CodoaCodo Grupo 14
+        </p>
+      </section>
+    </footer>
+  </body>
+  
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+  <script src="./app.js"></script>
 </html>
+
