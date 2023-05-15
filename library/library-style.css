@@ -8,7 +8,7 @@ body {
 }
 
 h2, li {
-    color:#8C9761;
+    color:#51573d;
 }
 .container {
     display: grid;
@@ -26,7 +26,67 @@ h2, li {
     justify-content: space-between;
 }
 
-.Logo {
+.container-header{
+    background: url(../library/imag/biblio_blanca.jpg) center no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.contain-logo{
+    width: 100%;
+    margin-right: 0;
+    display: flex;
+    padding-right: 0;
+}
+
+.contact-h1{
+    color: #51573d;
+    font-size: 65px;
+    margin-left: 50rem;
+    padding-top: 1rem;
+    text-shadow: 8px 6px 11px #A9907E;
+    opacity: 1;
+    animation: fadeIn 4s ease-in-out forwards;
+}
+
+.contact-h2{
+    color: #51573d;
+    font-size: 45px;
+    margin-left: -14rem;
+    padding-top: 9rem;
+    text-shadow: 8px 6px 11px #A9907E;
+    opacity: 1;
+    animation: fadeIn 4s ease-in-out forwards;
+}
+
+.logo{
+    margin-top: 4rem;
+}
+
+.linea{
+    border-top: 1.5px solid black;
+    height: 2px;
+    max-height: 250px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+.v-line{
+    border-left: thick solid #000;
+    height: 45%;
+    left: 25%;
+    position: absolute;
+}
+
+.v-line-r{
+    margin-top: 7.5%;
+    border-left: thick solid #000;
+    height: 48%;
+    right: 24%;
+    position: absolute;
+}
+
+/* .Logo {
     grid-area: logo;
     background-color: #dfbfb1;
 }
@@ -34,34 +94,85 @@ h2, li {
 .Header {
     grid-area: header;
     background-color: #f5dcd1;
-}
+} */
 
 .Left {
     grid-area: left;
-    background-color: coral;
+    margin-top: 5rem;
+    /* background-color: coral; */
     border-left: 15px;
-    list-style: none;
-    font-size: larger;
+    padding-left: 10%;
+   /*  list-style: none; */
+    /* font-size: larger; */
     text-align: justify;
 
 }
 
-.Right {
-    grid-area: right;
-    background-color: rgb(177, 177, 66);
+.Left h2{
+    color: #51573d;
+    text-decoration: underline;
 }
 
+.Left li{
+    margin-bottom: 1rem;
+    color: #51573d;
+    padding: 0 10px 0 10px;
+}
+
+.Right {
+    grid-area: right;
+    /* background-color: rgb(177, 177, 66); */
+    margin-top: 5rem;
+}
+
+.Right h2{
+    color: #51573d;
+    text-decoration: underline;
+}
+
+.Right iframe{
+    margin-top: .5rem;
+}
+
+
 .Main {
+    margin-top: 20px;
     grid-area: contenido;
-    background-color: rgb(189, 220, 223);
+    /* background-color: rgb(189, 220, 223); */
     text-align: justify;
     font-size: large;
 
 }
 
+p{
+    margin-top: 25px;
+    color: #51573d;
+    font-weight: 20px;
+}
+
+iframe{
+    width: 65%;
+    height: 40%;
+}
+
+.button{
+    background-color: #51573d;
+    border: none;
+    color: #f5dca3;
+    padding: 15px 32px;
+    text-align: center;
+    text-transform: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 25%;
+}
+
 .Footer {
     grid-area: foot;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 .item {
@@ -69,4 +180,19 @@ h2, li {
     height: 100%;
     border-radius: 15px;
     text-align: center;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
