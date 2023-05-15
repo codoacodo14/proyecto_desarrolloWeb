@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5dca3;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2, li {
+    color:#51573d;
+}
+.container {
+    display: grid;
+    /* Uso un atajo para definir tres filas / tres columnas */
+    grid-template: 20% 65% 8% / 17% auto 17%;
+
+    /* Distribuimos el contenido en cada fila */
+    grid-template-areas:
+        "header header header"
+        "left contenido right"
+        "foot foot foot";
+    /* separamos los items con gap */
+    grid-gap: 5px;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+
+.container-header{
+    background: url(../library/imag/biblio_blanca.jpg) center no-repeat;
+    overflow: hidden;
+    background-size: cover;
+
+}
+
+.contain-logo{
+    width: 100%;
+    margin-right: 0;
+    display: flex;
+    padding-right: 0;
+    
+ }
+ 
+.contact-h1{
+    color:#51573d;
+    font-size: 65px;
+    margin-left: 40rem;
+    padding-top: 1rem;
+    text-shadow: 8px 6px 11px #A9907E;
+    opacity: 1; 
+    animation: fadeIn 4s ease-in-out forwards;
+}
+
+.contact-h2{
+    color:#51573d;
+    font-size: 45px;
+    margin-left: -14rem;
+    padding-top: 9rem;
+    text-shadow: 8px 6px 11px #A9907E;
+    opacity: 1; 
+    animation: fadeIn 4s ease-in-out forwards;
+}
+
+ .logo {
+    margin-top: 4rem;
+}
+
+.linea {
+  border-top: 1.5px solid black;
+  height: 2px;
+  max-width: 250px;
+  padding: 0;
+  margin: 20px auto 0 auto;
+}
+
+.v-line{
+    /* margin-bottom: 5%; */
+    border-left: thick solid #000;
+    height:45%;
+    left: 25%;
+    position: absolute;
+}
+
+.v-line-r{
+    margin-top: 7.5%;
+    border-left: thick solid #000;
+    height:48%;
+    right: 24%;
+    position: absolute;
+}
+
+.Left {
+    grid-area: left;
+    margin-top: 5rem;
+    border-left: 15px;
+    padding-left: 10%;
+    text-align: justify;
+    /* background-color: #8c9761; */
+    border-color: #8c9761;
+    
+       
+}
+.Left h2{
+    color: #51573d;
+    text-decoration: underline;
+}
+
+.Left li{
+    margin-bottom: 1rem;
+    color: #51573d;
+    padding: 0 10px 0 10px;
+}
+
+.Right {
+    grid-area: right;
+   /*  background-color: #8C9761; */
+    margin-top: 5rem;
+}
+.Right h2{
+    color: #51573d;
+    text-decoration: underline;
+}
+
+.Right iframe{
+    margin-top: .5rem;
+}
+
+.Main {
+    margin-top: 20px;
+    grid-area: contenido;
+    text-align: justify;
+    font-size: large;
+
+}
+
+p {
+    margin-top: 25px;
+    color: #51573d;
+    font-weight: 20px;
+}
+
+iframe {
+    width: 65%;
+    height: 40%;
+}
+
+.button {
+  background-color: #51573d;
+  border: none;
+  color: #f5dca3;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 3px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.Footer {
+    grid-area: foot;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.item {
+    padding: 5px;
+    height:fit-content;
+    border-radius: 15px;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+      }
+      25%{
+        opacity: 0.25;
+      }
+      50% {
+        opacity: 0.5; 
+      }
+      100% {
+        opacity: 1;
+      }
+  }
