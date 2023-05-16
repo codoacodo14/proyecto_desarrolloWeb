@@ -26,17 +26,15 @@ h2, li {
     justify-content: space-between;
 }
 
+
 .container-header{
     background: url(../library/imag/biblio_blanca.jpg) center no-repeat;
     overflow: hidden;
     background-size: cover;
 }
 
-.contain-logo{
-    width: 100%;
-    margin-right: 0;
-    display: flex;
-    padding-right: 0;
+
+
 }
 
 .contact-h1{
@@ -96,16 +94,23 @@ h2, li {
     background-color: #f5dcd1;
 } */
 
-.Left {
-    grid-area: left;
-    margin-top: 5rem;
-    /* background-color: coral; */
+
+
     border-left: 15px;
     padding-left: 10%;
    /*  list-style: none; */
     /* font-size: larger; */
     text-align: justify;
-
+    background-color: #8C9761;
+    
+}
+.Left h2{
+    color: #FFB26B;
+}
+.Left li{
+    margin-bottom: 1rem;
+   color: #FFB26B;
+   padding: 0 10px 0 10px;
 }
 
 .Left h2{
@@ -121,6 +126,7 @@ h2, li {
 
 .Right {
     grid-area: right;
+
     /* background-color: rgb(177, 177, 66); */
     margin-top: 5rem;
 }
@@ -128,6 +134,7 @@ h2, li {
 .Right h2{
     color: #51573d;
     text-decoration: underline;
+
 }
 
 .Right iframe{
@@ -138,9 +145,9 @@ h2, li {
 .Main {
     margin-top: 20px;
     grid-area: contenido;
+
     /* background-color: rgb(189, 220, 223); */
-    text-align: justify;
-    font-size: large;
+
 
 }
 
@@ -172,12 +179,17 @@ iframe{
 
 .Footer {
     grid-area: foot;
+
     /* background-color: orange; */
+
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+
 }
 
 .item {
     padding: 5px;
-    height: 100%;
+    height:fit-content;
     border-radius: 15px;
     text-align: center;
 }
@@ -196,3 +208,4 @@ iframe{
         opacity: 1;
     }
 }
+

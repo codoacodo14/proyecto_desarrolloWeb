@@ -15,6 +15,7 @@ toggleCloseMenu.addEventListener('click', () => {
 });
 
 
+
 //API MAPS
 
 let map = L.map('map').setView([19.21619, -99.194467],12)
