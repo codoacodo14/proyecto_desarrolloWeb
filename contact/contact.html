@@ -106,6 +106,7 @@
           </footer>
     
   </div>
+  <script src="../events/events.js"></script>
   <script>window.addEventListener('DOMContentLoaded', function() {
     let menuContainer = document.querySelector('.container-header'); 
     
@@ -120,6 +121,7 @@
             h1.textContent = '¿Querés enviarnos tus sugerencias y/o consultas?';
 
             menuContainer.appendChild(h1);
+            initializeMenuFunctionality();
       }
     };
     xhr.send();

@@ -177,6 +177,7 @@ HTML, CSS y Javascript."
     </section>
     </footer>
   </div>
+  <script src="events.js"></script>
   <script>window.addEventListener('DOMContentLoaded', function() {
     let menuContainer = document.querySelector('.container-hr'); 
     
@@ -191,11 +192,14 @@ HTML, CSS y Javascript."
             h1.textContent = 'Talleres y Eventos';
 
             menuContainer.appendChild(h1);
+            initializeMenuFunctionality();
       }
     };
     xhr.send();
   });</script>
+  
   </body>
+
 
   
 </html>

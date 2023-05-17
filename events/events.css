@@ -1,5 +1,10 @@
 .menu ul{
     top: 0;
+    color: #FFB26B;
+   
+}
+.menu ul li a{
+    color: #FFB26B;
 }
 
 .hero h1{
@@ -7,23 +12,26 @@
     font-size: 55px; 
     text-align: right;
     text-shadow: 8px 6px 11px #A9907E;
-    line-height:1em
-      
+    line-height:1em;
+   
+
 }
 
 .hero {
     color:#51573d;
-    
+   
     margin-right: 24rem; 
     text-align: right;
     text-shadow: 8px 6px 11px #A9907E;
     line-height:1em;
     animation: fadeIn 4s ease-in-out forwards;  
+   
 }
 
 .hero{
     padding-top: 2.5rem;
     padding-right: 3rem;
+   
 }
 .container-hr {
     display: flex;
@@ -34,10 +42,12 @@
     width: 100%;
     height: 40vh;
     align-items: center;
+    
 }
 
 .logo{
     margin-top: 0;
+    
 }
 
 
