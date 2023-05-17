@@ -1,12 +1,44 @@
-
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 .contact-h1{
-    font-size: 30px;
-    padding-right: 3rem;
+    width: 100%;
+    color: #51573d;
+    font-size: 32px;
+    margin-right: 25rem;
+    
+    text-shadow: 8px 6px 11px #A9907E;
+    opacity: 1;
+    animation: fadeIn 4s ease-in-out forwards;
+} 
+.menu ul {
+    top: 0;
+    color: #FFB26B;
 }
-.contain-logo{
+.menu ul li a{
+    color: #FFB26B;
+}
+.container-header{
+    background: url("../library/imag/biblio_blanca.jpg")   ;
+    background-size: cover;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    height: 40vh; 
     display: flex;
-    justify-content: space-between;
+    
 }
 .main-contact{
     display: grid;
@@ -212,6 +244,8 @@
 .fa-times-circle:before {
     content: "\f058";
 }
+
+
 
                     /* QUERYS */
 

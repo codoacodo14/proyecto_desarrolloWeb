@@ -20,15 +20,13 @@
 
 </head>
 <body>
-  <div class="container">
+  
     <header class="container-header">
-        <div class="contain-logo">
-            <img class="logo" src="../static/img/logo.png" alt="" />
-            <h1 class="contact-h1">¿Querés enviarnos tus sugerencias y/o consultas?</h1>
-        </div>
+        
         
         
     </header>
+    <div class="container"></div>
     <main class="main-contact">
       <section class="contact">
         <h3>Encontranos en Redes</h3>
@@ -108,6 +106,24 @@
           </footer>
     
   </div>
+  <script>window.addEventListener('DOMContentLoaded', function() {
+    let menuContainer = document.querySelector('.container-header'); 
+    
+  
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '../nav.html', true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        menuContainer.innerHTML = xhr.responseText;
+        let h1 = document.createElement('h1');
+            h1.classList.add('contact-h1');
+            h1.textContent = '¿Querés enviarnos tus sugerencias y/o consultas?';
+
+            menuContainer.appendChild(h1);
+      }
+    };
+    xhr.send();
+  });</script>
 </body>
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="

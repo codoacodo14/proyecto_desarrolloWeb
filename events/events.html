@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    EVENTOS
-</body>
-</html>
-
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -37,26 +25,26 @@ HTML, CSS y Javascript."
       src="https://kit.fontawesome.com/b37802bc78.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../app.js"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
      crossorigin=""/>
-     <link rel="stylesheet" href="./style.css">
+     <link rel="stylesheet" href=".../style.css">
      <link rel="stylesheet" href="./events.css">
     
   </head>
 
-<body> 
-
+  <body>
+    
       <header class="container-hr">
-        <img class= "logo" src="../static/img/logo.png" alt="">
-        <div class="hero">
-          <h1>Mosaico</h1>
-          <h2>Talleres y Eventos</h2>
-        </div>
+        
+        
+         
+          
+        
       </header>
       
       <main class="grid-main">
@@ -71,46 +59,54 @@ HTML, CSS y Javascript."
               <div class="text-left">
                 <p>Los talleres están diseñados para explorar y desarrollar habilidades en áreas como la música, artes plásticas, danzas, teatro, lectura y escritura, y más..., más..., más... <br>
                 Tendrás la oportunidad de aprender de maestros en cada campo, mejorar tus habilidades y experimentar con diversidad de técnicas y materiales</p>
+                <button class="button-info"><a href="../contact/contact.html">Click para pedir info</a></li></button>
               </div>
             </div>
 
             <div id="slider" >
               <figure>
-                <img class="medium" src="imagenes/musica.jpeg" alt="">
-                <img class="medium" src="imagenes/danza_tango.jpg" alt="">
-                <img class="medium" src="imagenes/pinceles.jpg" alt="">
-                <img class="medium" src="imagenes/teatro.webp" alt="">
-                <img class="medium" src="imagenes/coloresTalleres.webp" alt="">
+                <img class="medium" src="./imagenes/musica.jpeg" alt="">
+                <img class="medium" src="./imagenes/danza_tango.jpg" alt="">
+                <img class="medium" src="./imagenes/pinceles.jpg" alt="">
+                <img class="medium" src="./imagenes/teatro.webp" alt="">
+                <img class="medium" src="./imagenes/photographer-428388_640.jpg" alt="">
               </figure>
             </div>      
           </div>
         </section>
 
-        <section class="event">
-          <div class="container-events">
-            <div class="info-ev">
+        <section class="event-container">
+          <h2 class="global">Nuestra</h2>
+          <h1 class="ws-ev">Cartelera</h1>
+          <div class="circle">
+            <i class="fas fa-circle"></i>
+          </div>
+          <div class="event">
+            
+          
+            
               <div class="image-group">
                   <img  src="./imagenes/Betita.JPG" alt="" />
-                  
-                  <a href=https://youtu.be/XD_FcSfNyHk" target="_blank">
-                    <img  src="./imagenes/spinettango2.jfif" alt=""> Clickea 'Spinettango'
-                  </a>     
+                  <div>
+                  <img  src="./imagenes/spinettango2.jfif" alt="">
+                  <a href="https://youtu.be/XD_FcSfNyHk" target="_blank">
+                     Clickea 'Spinettango'
+                  </a>  
+                </div>   
                   <img  src="./imagenes/photographer-428388_640.jpg" alt="" height="">
                   <img  src="./imagenes/artesano.avif" alt=""> 
                   
-                </div>                
-              <div class="des rig">   
-              <div class="global"><h2 class="ws-ev">Nuestra</h2>
-                <h1 class="ws-ev">Cartelera</h1>
-              </div>     
+                </div>      
+             
+            
+            <div class="des rig">   
+                  
                 
-              <div class="circle">
-                <i class="fas fa-circle"></i>
-              </div>
-             <div class="table-responsive">
+              
+              <div class="table-responsive">
               <table>
                 <thead>
-                <tr>
+                <tr class="first-tr">
                   <th>Día</th>
                   <th>Hora</th>
                   <th>Lugar</th>
@@ -146,12 +142,11 @@ HTML, CSS y Javascript."
             
           </div>
         </div>
-      </div>
       
-      </div>
-    </section>  
+      </section>  
     </main>
-
+       
+    
     <footer class="container-footer">
       <section class="icons-dates">
         <div class="info">
@@ -174,20 +169,33 @@ HTML, CSS y Javascript."
       </section>
       <section class="end">
    
-        <p>
-          Hecho por
-          <i class="fa-regular fa-lightbulb"></i>
-          CodoaCodo Grupo 14
-        </p>
-      </section>
+      <p>
+        Hecho por
+        <i class="fa-regular fa-lightbulb"></i>
+        CodoaCodo Grupo 14
+      </p>
+    </section>
     </footer>
-  </body>
+  </div>
+  <script>window.addEventListener('DOMContentLoaded', function() {
+    let menuContainer = document.querySelector('.container-hr'); 
+    
   
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-     crossorigin=""></script>
-  <script src="./app.js"></script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '../nav.html', true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        menuContainer.innerHTML = xhr.responseText;
+        let h1 = document.createElement('h1');
+            h1.classList.add('hero');
+            h1.textContent = 'Talleres y Eventos';
+
+            menuContainer.appendChild(h1);
+      }
+    };
+    xhr.send();
+  });</script>
+  </body>
+
+  
 </html>
-
-
-
