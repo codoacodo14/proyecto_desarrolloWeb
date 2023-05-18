@@ -25,13 +25,16 @@
 } 
 .menu ul {
     top: 0;
-    color: #FFB26B;
+    color: #51573d;
 }
 .menu ul li a{
-    color: #FFB26B;
+    color: #51573d;
+}
+.logo{
+    margin-bottom: 1rem;
 }
 .container-header{
-    background: url("../library/imag/biblio_blanca.jpg")   ;
+    background: url("./img/contact.jpg")   ;
     background-size: cover;
     align-items: center;
     justify-content:space-between;
