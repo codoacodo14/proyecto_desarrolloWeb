@@ -122,12 +122,12 @@ img.medium{
     width: 220px;
     height: 400px;
     object-fit: cover;
-   
+   z-index: 0;
 }
 .button-info{
     width: 30%;
     border: none;
-    background-color: #FFB26B;
+    background-color: #fdc087;
    margin-top: 1rem;
    height: 40px;
    
@@ -165,11 +165,12 @@ th,td {
     background-color: #ddbfa2;
 }
 tr{
-    background-color: #FFB26B;
+    background-color: #fdc087;
 }
 tr:nth-child(even){
     background-color: #9e8e84;
 }
+
 
 .table-responsive{
     display: block;
@@ -223,7 +224,7 @@ tr:nth-child(even){
     text-decoration: none;
     text-align: center;
     color: rgb(63, 104, 104);
-    background-color: #FFB26B;
+    background-color: #fdc087;
    margin-top: 1rem;
    height: auto;
    margin-left: 3rem;
@@ -275,6 +276,86 @@ div#slider figure {
         opacity: 1;
     }
 }
+
+/* QUERYS */
+@media   (max-width:480px) {
+    .logo{
+        width: 130px;
+        height: 130px;
+        margin-left: 5px;
+    }
+ .hero{
+        font-size: 40px;
+        margin-left: 10px;
+    }
+    .event{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        width: 230px;
+        height: 230px;
+       
+    }
+    .image-group{
+        justify-content: center;
+        padding: 0 5px 0 5px;
+    }
+    .image-group a{
+        margin-left: 1rem;
+    }
+}
+
+@media  (min-width: 481px) and (max-width:650px) {
+   header .container-hr{
+        width: 150%;
+    }
+    .hero{
+        margin-left: 60px;
+    }
+    .event{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        width: 230px;
+        height: 230px;
+       
+    }
+    .image-group{
+        justify-content: center;
+        padding: 0 5px 0 5px;
+    }
+    .image-group a{
+        margin-left: 1rem;
+    }
+}
+
+    @media  (min-width: 651px) and (max-width:850px){
+        .event{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width: 230px;
+            height: 230px;
+           
+        }
+        .image-group{
+            justify-content: center;
+            padding: 0 5px 0 5px;
+        }
+        .image-group a{
+            margin-left: 1rem;
+    }
+}
+
 
 
 
