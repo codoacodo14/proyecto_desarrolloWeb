@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Libro</title>
+</head>
+<body>
+    <h2>Agregar Libro</h2>
+    <form id="book-form">
+        <label for="autor">Autor:</label>
+        <input type="text" name="autor" id="autor" required>
+
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo" id="titulo" required>
+
+        <label for="editorial">Editorial:</label>
+        <input type="text" name="editorial" id="editorial" required>
+
+        <label for="disponibilidad">Disponibilidad</label>
+        <input type="text" name="disponibilidad" id="disponibilidad">
+
+        
+
+        <label for="area">Área:</label>
+        <input type="text" name="area" id="area" required>
+
+        <button type="submit">Agregar Libro</button>
+    </form>
+    <h2>Eliminar Libro y/o Actualizar</h2>
+    <form id="search_form">
+        <label for="libro-nombre">Nombre del Libro:</label>
+        <input type="text" id="libro-nombre" name="libro-nombre" >
+        <label for="libro-autor">Autor del Libro:</label>
+        <input type="text" id="libro-autor" name="libro-autor" >
+        <button type="submit">Buscar</button>
+      </form>
+      <div id="book-info-container"></div>
+      <button id="close_session">cerrar sesion</button>
+    <script src="./add_delete_book.js"></script>
+</body>
+</html>
