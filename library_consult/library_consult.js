@@ -3,67 +3,61 @@ document.getElementById('container-form').addEventListener('submit', function(ev
     event.preventDefault(); // Evitamos que se recargue la página
 
     // Obtenemos los valores del formulario
-    var title = document.getElementById('title').value;
-    var author = document.getElementById('author').value;
+    let title = document.getElementById('title').value;
+    let author = document.getElementById('author').value;
 
-    var category = document.getElementById('category').value;
+    let category = document.getElementById('category').value;
 
     // Construimos la URL de búsqueda con los parámetros
-    var searchParams = new URLSearchParams();
+    let searchParams = new URLSearchParams();
 
     if (title.trim() !== '') {
-    searchParams.append('titulo', title);
+    searchParams.append('title', title);
     }
 
     if (author.trim() !== '') {
-    searchParams.append('autor', author);
+    searchParams.append('author', author);
     }
 
-   // Incluir el campo "category" sin validación
+   // Incluimos el campo "category" 
     searchParams.append('area', category);
-    var searchUrl = 'http://127.0.0.1:4000/api/libros?' + searchParams.toString();
+    let searchUrl = 'https://laupadron.pythonanywhere.com/api/books?' + searchParams.toString();
 
     // Realizamos la solicitud GET al servidor para buscar el libro
     fetch(searchUrl)
     .then(function(response) {
         if (response.ok) {
-            return response.json(); // Parseamos la respuesta JSON
+            return response.json(); 
         } else {
             throw new Error('Error al buscar el libro.');
         }
     })
     .then(function(data) {
-        // Aquí puedes manejar la respuesta de la API según tus necesidades
-        console.log(data)
-            // Obtener el elemento HTML donde deseas mostrar los resultados
-    var resultsContainer = document.getElementById('results-container');
-
- // Limpiar el contenido existente en el contenedor
+        
+            // Obtenemos el elemento HTML donde deseas mostrar los resultados
+    let resultsContainer = document.getElementById('results-container');
     resultsContainer.innerHTML = '';
 
-    // Verificar si se encontraron libros
+    // Verificamos si se encontraron libros
     if (data.length > 0) {
-        // Crear una lista para mostrar los libros
-        var ul = document.createElement('ul');
+        
+        let ul = document.createElement('ul');
 
-        // Iterar sobre cada libro en los datos
         data.forEach(function(book) {
-            // Crear un elemento de lista para cada libro
-            var li = document.createElement('li');
-            // Crear un contenido para mostrar los detalles del libro
-            var bookDetails = document.createTextNode('Título: ' + book.titulo + ', Autor: ' + book.autor +', disponibilidad: ' + book.disponibilidad + ', area: ' + book.area);
-            // Agregar el contenido al elemento de lista
+            // Creamos un elemento de lista para cada libro
+            let li = document.createElement('li');
+            // Creamos un contenido para mostrar los detalles del libro
+            let bookDetails = document.createTextNode('Título: ' + book.title + ', Autor: ' + book.author +', disponibilidad: ' + book.availability + ', area: ' + book.area);
+            // Agregamos el contenido al elemento de lista
             li.appendChild(bookDetails);
-
-            // Agregar el elemento de lista a la lista
+            // Agregamos el elemento de lista a la lista
             ul.appendChild(li);
         });
 
-        // Agregar la lista al contenedor de resultados
+        // Agregamos la lista al contenedor de resultados
         resultsContainer.appendChild(ul);
     } else {
-        // Mostrar un mensaje si no se encontraron libros
-        var noBooksMessage = document.createTextNode('No se encontraron libros.');
+        let noBooksMessage = document.createTextNode('No se encontraron libros.');
         resultsContainer.appendChild(noBooksMessage);
     }
 })
