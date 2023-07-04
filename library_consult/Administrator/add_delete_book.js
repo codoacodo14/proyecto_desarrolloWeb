@@ -88,38 +88,97 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(function(data) {
           
           resultsContainer.innerHTML = ''; 
-  
-          if (data.length > 0) {
-            let ul = document.createElement('ul');
-  
-            data.forEach(function(book) {
-              let li = document.createElement('li');
-              li.setAttribute('data-book-id', book.id);
+          
+            if (data.length > 0) {
+            let table = document.createElement('table');
+            table.classList.add('table', 'table-fixed'); // Agregar clases Bootstrap 'table' y 'table-fixed' a la tabla
+          
+            // Crear encabezados de columna
+            let thead = document.createElement('thead');
+            let headerRow = document.createElement('tr');
+            let idHeader = document.createElement('th');
+            idHeader.textContent = 'ID';
+            let titleHeader = document.createElement('th');
+            titleHeader.textContent = 'Título';
+            let authorHeader = document.createElement('th');
+            authorHeader.textContent = 'Autor';
+            let availabilityHeader = document.createElement('th');
+            availabilityHeader.textContent = 'Disponibilidad';
+            let areaHeader = document.createElement('th');
+            areaHeader.textContent = 'Área';
+            let actionsHeader = document.createElement('th');
+            actionsHeader.textContent = 'Acciones';
+          
+            headerRow.appendChild(idHeader);
+            headerRow.appendChild(titleHeader);
+            headerRow.appendChild(authorHeader);
+            headerRow.appendChild(availabilityHeader);
+            headerRow.appendChild(areaHeader);
+            headerRow.appendChild(actionsHeader);
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+          
+            let tbody = document.createElement('tbody');
+          
+            data.forEach(function (book) {
+              let row = document.createElement('tr');
               
-              let bookDetails = document.createTextNode('Id: ' + book.id + ', Título: ' + book.title + ', Autor: ' + book.author + ', disponibilidad: ' + book.availability + ', Área: ' + book.area );
-              li.appendChild(bookDetails);
-
+              let idCell = document.createElement('td');
+              idCell.style.width = '10%'; // Establecer ancho igual para cada celda de la columna de ID
+              idCell.textContent = book.id;
+              
+              let titleCell = document.createElement('td');
+              titleCell.style.width = '20%'; // Establecer ancho igual para cada celda de la columna de título
+              titleCell.textContent = book.title;
+              
+              let authorCell = document.createElement('td');
+              authorCell.style.width = '20%'; // Establecer ancho igual para cada celda de la columna de autor
+              authorCell.textContent = book.author;
+              
+              let availabilityCell = document.createElement('td');
+              availabilityCell.style.width = '15%'; // Establecer ancho igual para cada celda de la columna de disponibilidad
+              availabilityCell.textContent = book.availability;
+              
+              let areaCell = document.createElement('td');
+              areaCell.style.width = '15%'; // Establecer ancho igual para cada celda de la columna de área
+              areaCell.textContent = book.area;
+              
+              let actionsCell = document.createElement('td');
+              actionsCell.style.width = '20%'; // Establecer ancho igual para cada celda de la columna de acciones
               
               let updateButton = document.createElement('button');
               updateButton.textContent = 'Actualizar libro';
+              updateButton.classList.add('btn', 'btn-custom-pink', 'mr-2');
               updateButton.addEventListener('click', function() {
-              showUpdateForm = true;
-              bookIdToUpdate = book.id; 
-              renderBooks();
-            });
-  
+                showUpdateForm = true;
+                bookIdToUpdate = book.id; 
+                renderBooks();
+              });
+              
               let deleteButton = document.createElement('button');
               deleteButton.textContent = 'Eliminar libro';
+              deleteButton.classList.add('btn', 'btn-custom-pink');
               deleteButton.addEventListener('click', function() {
                 deleteBook(book.id);
               });
-  
-              li.appendChild(updateButton);
-              li.appendChild(deleteButton);
-              ul.appendChild(li);
+              
+              actionsCell.appendChild(updateButton);
+              actionsCell.appendChild(deleteButton);
+              
+              row.appendChild(idCell);
+              row.appendChild(titleCell);
+              row.appendChild(authorCell);
+              row.appendChild(availabilityCell);
+              row.appendChild(areaCell);
+              row.appendChild(actionsCell);
+              
+              tbody.appendChild(row);
             });
-  
-            resultsContainer.appendChild(ul);
+          
+            table.appendChild(tbody);
+            resultsContainer.appendChild(table);
+          
+          
           } else {
             let noBooksMessage = document.createTextNode('No se encontraron libros.');
             resultsContainer.appendChild(noBooksMessage);

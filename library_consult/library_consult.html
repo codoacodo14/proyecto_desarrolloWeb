@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="./library_consult.css" />
+    <link rel="stylesheet" href="./Administrator/add_delete_book.css">
     <link
       rel="shortcut icon"
       href="../static/img/logo.png"
@@ -35,8 +36,7 @@
     <main>
       <br /><br /><br />
       <h3>
-        Podés Consultar la disponibilidad de libros para retirar en el espacio
-        aquí
+        En esta sección podés consultar la disponibilidad de libros para retirar en nuestro espacio
       </h3>
 
       <section class="consult">
@@ -58,7 +58,7 @@
               class="form-control"
               id="author"
               placeholder="Harari Yuval Noah"
-              value="Harari Yuval Noah"
+              value=""
             />
           </div>
           <div class="col-md-4">
@@ -68,7 +68,7 @@
               class="form-control"
               id="category"
               placeholder="Filosofía-Historia General"
-              value="Filosofía-Historia"
+              value=""
             />
           </div>
 
@@ -79,17 +79,17 @@
             <button type="reset" class="btn btn-sm btn-success btn-lg">
               Limpiar Búsqueda
             </button>
+            <a
+            href="../library_consult/Administrator/login_admin.html"
+            class="btn btn-success"
+            >Ingreso a Administrador
+          </a>
           </div>
         </form>
       </section>
       <br /><br /><br />
-      <div id="results-container" class="text-center">
-        <a
-          href="../library_consult/Administrator/login_admin.html"
-          class="btn btn-success"
-          >Ingreso a Administrador
-        </a>
-      </div>
+      <div id="results-container" class="text-center"></div>
+     
       <br /><br />
     </main>
 
