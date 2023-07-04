@@ -1,3 +1,16 @@
+//protejo la pagina
+
+function isUserLoggedIn() {
+  const token = localStorage.getItem('token');
+  return !!token; // Devuelve true si el token existe y false si no existe
+}
+
+if (isUserLoggedIn()) {
+  // Mostrar el contenido oculto
+  const content = document.getElementById('content');
+  content.classList.remove('hidden');
+}
+
 //add books
 document.addEventListener('DOMContentLoaded', function() {
     const bookForm = document.getElementById('book-form');
