@@ -52,6 +52,7 @@ document.getElementById('container-form').addEventListener('submit', function(ev
   let authorHeader = document.createElement('th');
   authorHeader.textContent = 'Autor';
   let availabilityHeader = document.createElement('th');
+  
   availabilityHeader.textContent = 'Disponibilidad';
 
   headerRow.appendChild(titleHeader);
@@ -73,6 +74,7 @@ document.getElementById('container-form').addEventListener('submit', function(ev
             let availabilityCell = document.createElement('td');
             availabilityCell.style.width = '33%';
             availabilityCell.textContent = book.availability;
+            availabilityCell.classList.add('text-danger')
 
             row.appendChild(titleCell);
             row.appendChild(authorCell);
