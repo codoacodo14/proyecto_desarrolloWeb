@@ -137,27 +137,27 @@ document.addEventListener('DOMContentLoaded', function() {
               let row = document.createElement('tr');
               
               let idCell = document.createElement('td');
-              idCell.style.width = '10%'; // Establecer ancho igual para cada celda de la columna de ID
+              idCell.style.width = '10%'; 
               idCell.textContent = book.id;
               
               let titleCell = document.createElement('td');
-              titleCell.style.width = '20%'; // Establecer ancho igual para cada celda de la columna de título
+              titleCell.style.width = '20%'; 
               titleCell.textContent = book.title;
               
               let authorCell = document.createElement('td');
-              authorCell.style.width = '20%'; // Establecer ancho igual para cada celda de la columna de autor
+              authorCell.style.width = '20%'; 
               authorCell.textContent = book.author;
               
               let availabilityCell = document.createElement('td');
-              availabilityCell.style.width = '15%'; // Establecer ancho igual para cada celda de la columna de disponibilidad
+              availabilityCell.style.width = '15%'; 
               availabilityCell.textContent = book.availability;
               
               let areaCell = document.createElement('td');
-              areaCell.style.width = '15%'; // Establecer ancho igual para cada celda de la columna de área
+              areaCell.style.width = '15%'; 
               areaCell.textContent = book.area;
               
               let actionsCell = document.createElement('td');
-              actionsCell.style.width = '20%'; // Establecer ancho igual para cada celda de la columna de acciones
+              actionsCell.style.width = '20%'; 
               
               let updateButton = document.createElement('button');
               updateButton.textContent = 'Actualizar libro';
@@ -392,10 +392,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //cerrar sesion
 document.getElementById('close_session').addEventListener('click', function() {
-    // Eliminar el token de autenticación del Local Storage
+    
     localStorage.removeItem('token');
     
-    // Redirigir a la página library_consult
+    
     window.location.href = '../library_consult.html';
   });
   
