@@ -356,10 +356,12 @@ document.addEventListener('DOMContentLoaded', function() {
       
           let submitButton = document.createElement('button');
           submitButton.textContent = 'Actualizar';
+          submitButton.classList.add('btn-custom-pink');
           updateForm.appendChild(submitButton);
 
           let deleteButton = document.createElement('button');
         deleteButton.textContent = 'Eliminar libro';
+        deleteButton.classList.add('btn-custom-pink');
         deleteButton.addEventListener('click', function() {
         deleteBook(bookIdToUpdate);
           });
